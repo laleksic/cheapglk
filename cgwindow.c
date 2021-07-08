@@ -416,9 +416,13 @@ void glk_window_clear(window_t *win)
         return;
     }
 
+    /* We don't need screen clearing for the bot. */
+    /*
     for (ix=0; ix<gli_screenheight; ix++) {
         putc('\n', stdout);
     }
+    */
+    putc('\n', stdout);
 }
 
 void glk_window_move_cursor(window_t *win, glui32 xpos, glui32 ypos)
