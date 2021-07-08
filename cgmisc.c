@@ -89,8 +89,8 @@ void glk_select(event_t *event)
         }
     }
     
-    /* Terminate output with 0 byte to make it easy to parse with bot. */
-    fputc(0, stdout);
+    /* Terminate output with special terminator to make it easy to parse with bot. */
+    fputs("\n\x03\n", stdout);
 
     fflush(stdout);
 
