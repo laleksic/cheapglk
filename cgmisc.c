@@ -88,6 +88,10 @@ void glk_select(event_t *event)
             printf(">");
         }
     }
+    
+    /* Terminate output with 0 byte to make it easy to parse with bot. */
+    fputc(0, stdout);
+
     fflush(stdout);
 
     if (!win || !(win->char_request || win->line_request)) {
