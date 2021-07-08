@@ -1,3 +1,15 @@
+This is a fork of CheapGlk (https://github.com/erkyrath/cheapglk) with some
+tiny changes to facilitate use with my Telegram IF bot
+(https://github.com/laleksic/telegram-if-bot).
+
+The changes are:
+    - Clearing the window now just prints a single new line.
+    - When the interpreter is done with output and awaiting input
+      it writes the ETX (0x03) byte on a line on its own to signal
+      this to the driver program.
+
+Original readme follows:
+
 CheapGlk: Cheapass Implementation of the Glk API.
 
 CheapGlk Library: version 1.0.6.
